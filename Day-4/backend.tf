@@ -1,7 +1,9 @@
 terraform {
   backend "s3" {
-    bucket = "kavitha-my-bucket"
-    key    = "kavitha/backend-terraform.tfstate" #path to store the terraform statefile in bucket
-    region = "eu-north-1"
+    bucket         = "abhishek-s3-demo-xyz" # change this
+    key            = "abhi/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "terraform-lock"
   }
 }
